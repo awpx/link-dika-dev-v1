@@ -1,0 +1,22 @@
+{
+  "name": "mern-urlshortner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/server",
+    "dev": "nodemon server/server"
+  },
+  "author": "awpx",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.7",
+    "shortid": "^2.2.15"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4"
+  }
+}
