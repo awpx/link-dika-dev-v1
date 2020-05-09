@@ -5,7 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node server/server",
-    "dev": "nodemon server/server"
+    "server": "nodemon server/server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "awpx",
   "license": "MIT",
@@ -17,6 +19,7 @@
     "valid-url": "^1.0.9"
   },
   "devDependencies": {
+    "concurrently": "^5.3.0",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.4"
   }
