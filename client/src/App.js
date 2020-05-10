@@ -31,20 +31,31 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <form onSubmit={onSubmit}>
-        <fieldset>
-          <input 
-            type='text' 
-            placeholder='Shorten your link . . .'
-            onChange={(e) => setRealUrl(e.target.value)}   
-          />
-          <input type='submit' value='Shorten' />
-        </fieldset>
-        <fieldset>
-          <span id='result'> {shortUrl} </span>
-        </fieldset>
-      </form>
+    <div className="container">
+      <div className='body-wrap'>
+        <header>
+          <h1><span>url.awp</span></h1>
+          <small>. . . shorten your looooong url.</small>
+        </header>
+        <main>
+          <form onSubmit={onSubmit}>
+
+            <fieldset>
+              <input 
+                type='text' 
+                placeholder='Shorten your link . . .'
+                onChange={(e) => setRealUrl(e.target.value)}   
+              />
+              <input type='submit' value='Shorten' />
+            </fieldset>
+
+            <fieldset className={shortUrl !== '' ? 'display-result' : 'hide-result'}>
+              <span id='result'> {shortUrl} </span>
+            </fieldset>
+
+          </form>
+        </main>
+      </div>
     </div>
   );
 }
