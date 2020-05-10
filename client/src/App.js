@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import axios from 'axios'
 import validator from 'validator'
 import './App.css';
@@ -6,6 +6,8 @@ import './App.css';
 function App() {
   const [ realUrl, setRealUrl ] = useState('')
   const [ shortUrl, setShortUrl ] = useState('')
+  const [ copySuccess, setCopySuccess ] = useState('')
+  const textRef = useRef(null)
 
   const onSubmit = async (e) => {
     e.preventDefault()
@@ -30,6 +32,17 @@ function App() {
     }
   }
 
+  const onCopy = (e) => {
+
+    textRef.current.select();
+    document.execCommand('copy');
+    // This is just personal preference.
+    // I prefer to not show the whole text area selected.
+    e.target.focus();
+    setCopySuccess('Copied!')
+
+  }
+
   return (
     <div className="container">
       <div className='body-wrap'>
@@ -50,7 +63,12 @@ function App() {
             </fieldset>
 
             <fieldset className={shortUrl !== '' ? 'display-result' : 'hide-result'}>
-              <span id='result'> {shortUrl} </span>
+              <input type='text' ref={textRef} id='result' value={shortUrl} readOnly />
+              <button id='copy' onClick={onCopy}>  Copy  </button>
+            </fieldset>
+
+            <fieldset className={copySuccess !== '' ? 'display-result' : 'hide-result'}>
+              <input type='text' id='result' value={copySuccess} style={{backgroundColor: "lightblue"}} readOnly />
             </fieldset>
 
           </form>
