@@ -33,13 +33,10 @@ function App() {
   }
 
   const onCopy = (e) => {
-
     textRef.current.select();
     document.execCommand('copy');
-    // This is just personal preference.
-    // I prefer to not show the whole text area selected.
     e.target.focus();
-    setCopySuccess('Copied!')
+    setCopySuccess('COPIED!')
 
   }
 
@@ -48,7 +45,7 @@ function App() {
       <div className='body-wrap'>
         <header>
           <h1><span>url.awp</span></h1>
-          <small>. . . shorten your looooong url.</small>
+            <small><h3>. . . shorten your loooooooooong URL</h3></small>
         </header>
         <main>
           <form onSubmit={onSubmit}>
@@ -59,16 +56,16 @@ function App() {
                 placeholder='Shorten your link . . .'
                 onChange={(e) => setRealUrl(e.target.value)}   
               />
-              <input type='submit' value='Shorten' />
+              <input type='submit' value='Shorten ' />
             </fieldset>
 
             <fieldset className={shortUrl !== '' ? 'display-result' : 'hide-result'}>
               <input type='text' ref={textRef} id='result' value={shortUrl} readOnly />
-              <button id='copy' onClick={onCopy}>  Copy  </button>
+              <button id='copy' onClick={onCopy}>Copy URL</button>
             </fieldset>
 
-            <fieldset className={copySuccess !== '' ? 'display-result' : 'hide-result'}>
-              <input type='text' id='result' value={copySuccess} style={{backgroundColor: "lightblue"}} readOnly />
+            <fieldset className={copySuccess !== '' ? 'display-result' : 'hide-result'} >
+              <input type='text' id='result' value={copySuccess} style={{backgroundColor: "#3D66DE"}} readOnly />
             </fieldset>
 
           </form>

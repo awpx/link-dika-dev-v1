@@ -19,8 +19,7 @@ html {
   box-sizing: inherit; }
 
 body {
-  background: #23253D;
-  background: #23253D;
+  background: #171F2F;
   background-size: 30%;
   background-repeat: no-repeat;
   background-position: 0 45%;
@@ -28,7 +27,7 @@ body {
   line-height: 24px; }
   @media screen and (max-width: 767px) {
     body {
-      background: #23253D; } }
+      background: #1E1E21; } }
 
 ul {
   padding: 0px;
@@ -39,7 +38,7 @@ ul {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
-  color: #fff; }
+  color: #ECF4FB; }
 
 .container {
   max-width: 1336px;
@@ -65,14 +64,14 @@ header {
   margin: auto; }
   header h1 {
     margin: 0;
-    color: #fff;
+    color: #ECF4FB;
     font-size: 88px;
     line-height: 88px;
     font-weight: 700; }
     header h1 span {
-      color: #ccc; }
+      color: #ECF4FB; }
   header small {
-    color: #7e8099;
+    color: #ECF4FB;
     font-size: 14px;
     text-align: right;
     display: block; }
@@ -100,11 +99,11 @@ main form {
       -webkit-box-shadow: none;
       box-shadow: none; }
     main form fieldset input[type="submit"] {
-      background: #108d7d;
+      background: #BE3760;
       background-position: 85% 50%;
       background-size: 30px;
       background-repeat: no-repeat;
-      color: #fff;
+      color: #ffffff;
       text-transform: uppercase;
       font-size: 14px;
       line-height: 14px;
@@ -123,7 +122,8 @@ main form {
       transition: 0.6s all;
       cursor: pointer; }
       main form fieldset input[type="submit"]:hover {
-        background: #13a491;
+        background: #565CAF;
+        color: white;
         background-position: 85% 50%;
         background-size: 30px;
         background-repeat: no-repeat;
@@ -141,20 +141,19 @@ main .display-result #result, main .display-result #copy {
   transition: 0.3s all; }
 
 main #result {
-  display: block;
-  background: #1e1d32;
-  padding: 20px;
-  text-align: center;
-  color: #fff;
-  border-radius: 0 0 10px 10px;
-  text-shadow: 1px 1px 1px #000;
-  opacity: 0;
-  -webkit-transition: 0.6s all;
-  -o-transition: 0.6s all;
-  transition: 0.6s all; }
+    display: block;
+    background: #000000;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    opacity: 0;
+    -webkit-transition: 0.6s all;
+    -o-transition: 0.6s all;
+    transition: 0.6s all; }
 
 button {
-    background: red;
+    background: #565CAF;
     background-position: 85% 50%;
     background-size: 30px;
     background-repeat: no-repeat;
@@ -176,3 +175,13 @@ button {
     -o-transition: 0.6s all;
     transition: 0.6s all;
     cursor: pointer; }
+
+button:hover {
+    background: #BE3760;
+    color: white;
+    background-position: 85% 50%;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    -webkit-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    transition: 0.3s all; }
