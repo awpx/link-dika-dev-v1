@@ -18,7 +18,7 @@ function App() {
     });
 
     if (!validURL) {
-        alert('Please ensure the url is correct and includes the http(s) protocol.');
+        alert('url validation failed, url not compliant');
     } else {
       //save to db
       try {
