@@ -2,12 +2,12 @@ const express = require('express')
 const path = require('path')
 const morgan = require('morgan')
 const connectDB = require('./config/db')
-require('dotenv').config({ path: './server/config/config.env' })
+require('dotenv').config()
 
 const app = express()
 
 //body parser
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
 
 //db
