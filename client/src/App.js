@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import axios from 'axios'
 import validator from 'validator'
 import './App.css';
@@ -31,6 +31,10 @@ function App() {
       }
     }
   }
+
+  useEffect(() => {
+    setTimeout(() => setCopySuccess(''), 2000);
+  }, [copySuccess]);
 
   const onCopy = (e) => {
     textRef.current.select();
