@@ -1,6 +1,5 @@
 const express = require('express')
 const path = require('path')
-const morgan = require('morgan')
 const connectDB = require('./config/db')
 require('dotenv').config()
 
@@ -31,11 +30,6 @@ if(process.env.NODE_ENV === 'production') {
   app.get('/', (req, res) => {
     res.send('api services running')
   })
-}
-
-//morgan
-if (process.env.NODE_ENV === 'development') {
-  app.use(morgan('dev'))
 }
 
 const PORT = process.env.PORT
