@@ -5,4 +5,4 @@
 - MongoDB Atlas(mongoose)
 - React
 
-Live Demo [Click Here](https://link.dika.dev/)
+Live Demo [Click Here](https://awpurl.onrender.com) (Maybe can take 30 to 60 second on first render)
