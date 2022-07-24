@@ -22,12 +22,8 @@ function App() {
     } else {
       //save to db
       try {
-        const { data } = await axios.post('/url/api/v1/shorten', { realUrl })
+        const { data } = await axios.post('https://awpurl-backend.onrender.com/url/api/v1/shorten', { realUrl })
         
-        if(!data) {
-          console.log('nodata')
-        } else console.log(data, data.url)
-
         setShortUrl(data.url.shortUrl)
   
       } catch (error) {
