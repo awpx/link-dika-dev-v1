@@ -1,5 +1,6 @@
 const express = require('express')
 const path = require('path')
+const cors = require('cors')
 const connectDB = require('./config/db')
 require('dotenv').config()
 
@@ -8,6 +9,8 @@ const app = express()
 //body parser
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
+
+app.use(cors())
 
 //db
 connectDB()
