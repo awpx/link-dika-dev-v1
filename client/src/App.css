@@ -143,7 +143,7 @@ main .display-result #result, main .display-result #copy {
 main #result {
     display: block;
     background: #000000;
-    padding: 20px;
+    /* padding: 20px; */
     text-align: center;
     color: #fff;
     text-shadow: 1px 1px 1px #000;
